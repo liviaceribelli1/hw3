@@ -18,21 +18,10 @@ for date2 in df2.Date:
         index2.append(int(df1.index[df1.Date == date2].values[0]))
 print(index2)
 
-plt.figure("Apple")
-plt.plot(df1["Date"], df1["Close"], 'r-', linewidth=0.6, label="APPL")
-plt.xlabel("Dates")
-plt.legend(loc="upper left")
-
 plt.figure("Samsung")
-plt.plot(df2["Date"], df2["Close"], 'r-', linewidth=0.6, label="Samsung")
+plt.plot(df1["Date"], df1["Close"], 'r-', linewidth=0.6, label="APPL")
+plt.plot(df2["Date"], df2["Close"], 'b-', linewidth=0.6, label="Samsung")
 plt.xlabel("Dates")
 plt.legend(loc="upper left")
 
 plt.show()
-
-df1['rebounds'] = pd.series[df2]
-
-df1["E"] = ["AAPL", "Samsung"] * 3
-print(df1)
-df1.plot()
-print(df1.plot())
